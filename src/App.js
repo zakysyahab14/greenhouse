@@ -1,19 +1,21 @@
 import React from 'react';
 import './App.css';
 import Bar from './component/navbar.js'
-import Email from './component/email.js'
+import About from './component/email.js'
 import News from './component/news.js'
-import Start from './component/start.js'
 import Footer from './component/footer.js'
+import Pricing from './component/pricing.js'
+import Example from './component/form.js'
 
 
 function App() {
   return (
-    <div className="App">
+    <div id="Page" className="App">
         <Bar />
-        <Email />
         <News />
-        <Start />
+        <About />
+        <Pricing />
+        <Example />
         <Footer />
       
     </div>

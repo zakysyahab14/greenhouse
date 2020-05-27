@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+
 }
 
 .App-logo {
@@ -12,7 +19,44 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.triangle-topleft {
+  width: 300px;
+  height: 100px;
+  border-top: 100px solid rgb(18, 209, 209);
+  border-right: 100px solid transparent;
+  position: absolute;
+  z-index: -1;
+}
+.triangle-bottomright {
+  width: 500px;
+  height: 300px;
+  border-bottom: 300px solid rgba(12,103,208,1);
+  border-left: 500px solid transparent;
+  background: linear-gradient(90deg, rgba(12,103,208,1) 0%, rgb(190, 133, 211) 100%);
+}
+.textHome {
+  font-size: 28px;
+  color: white;
+  text-align: center;
+  vertical-align: bottom;
+  font-weight: bold!important;
+}
+.nav-link {
+  color: black!important;
+  font-size: 28px!important;
+  font-weight: bold!important;
+  vertical-align: bottom;
+}
+.button-navBar {
+  color: rgb(18, 209, 209);
+  border: 1px solid rgb(18, 209, 209);
+  background: transparent;
+  height: 40px;
+  width: 150px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -23,7 +67,10 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+#Page {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
 .App-link {
   color: #61dafb;
 }
@@ -43,26 +90,24 @@
     align-self: end;
     z-index: 2;
 }
-.email {
+.about {
   grid-row: 1 / 3;
   align-self: center;
   z-index: 2;
   text-align: left!important;
 
 }
-.koper {
-  grid-column: 2 / 4;
+.visi {
+  grid-column: 2 / 3;
   grid-row: 3 / 4;
-  text-align-last: left;
-  align-self: end
+  padding-top: 0!important;
 
     }
-    .koper1 {
+  .misi {
       grid-column: 3 / 4;
       grid-row: 3 / 4;
       text-align-last: center;
-      margin-left: 30%;
-      align-self: end
+      padding-top: 0!important;
     }
 .sun {
 	grid-row: 1 / 3;
@@ -95,7 +140,6 @@
 
 .text {
   font-size: 14px;
-  text-align: left;
 }
 .btnTrial {
   background-color: #262626;
@@ -111,7 +155,7 @@ hr {
   margin-top: 0!important;
   border-top: 1px solid red!important;
   margin-left: -600px;
-  width: 300%;
+  width: 220%;
 }
 .nav-link.active {
   color: red!important;
@@ -124,10 +168,8 @@ hr {
 }
 .grid-container2 {
   display: grid;
-  grid-template-columns: 25% auto 25% ;
-  grid-template-rows:  300px 250px 400px;
-  margin-left: 8%;
-  margin-right: 8%;
+  grid-template-columns: 35% auto 15% ;
+  grid-template-rows:  300px 250px 0px;
 }
 
 .grid-container2 > div {
@@ -139,6 +181,7 @@ hr {
 .item2 {
     text-align: left!important;
     align-self: end;
+    margin-left: 50px;
 }
 .item3 {
 	grid-row: 1 /2;
@@ -146,15 +189,16 @@ hr {
 }
 .item4 {
 	grid-row: 1 /2;
-    grid-column: 3/ 4;
-    text-align: left!important;
+    grid-column: 2/ 3;
     align-self: flex-start;
-
+}
+.item5 {
+  grid-column: 1/2;
 }
 .item6 {
-  grid-area: 1/ 2 / 3 /4;
-  align-self: end;
+  grid-area: 1/2/3/4;
   text-align-last: right;
+  align-self: flex-end;
 }
 .item7 {
   grid-area:3 / 2 / 4 / 3;
@@ -226,8 +270,8 @@ hr {
   height: 80px;
 }
 .imgGrp2 {
-  height: 400px;
-  width: 750px;
+  height: 100px;
+  width: 100px;
 }
 .imgFurni {
   height: 300px;
@@ -237,7 +281,7 @@ hr {
   .flex-container2 > div {
     width: 25%;
     margin: 10px;
-    text-align: center;
+    text-align: left;
     line-height: 20px;
     font-size: 12px;
   }
@@ -249,10 +293,10 @@ hr {
   }
   .grid-container2 {
     display: grid;
-    grid-template-columns: 25% 50% auto ;
-    grid-template-rows:  300px 250px 400px;
-    margin-left: 8%;
-    margin-right: 10%;
+    /* grid-template-columns: 25% 50% auto ; */
+    grid-template-rows:  300px 250px 0px;
+    /* margin-left: 8%;
+    margin-right: 10%; */
   }
 }
 @media screen and (max-width: 768px) {
@@ -282,16 +326,21 @@ hr {
     width: 300%;
   }
   .grid-container2 {
-    grid-template-columns: 25% auto 25% ;
-    grid-template-rows:  270px 250px 300px;
-    margin-left: 8%;
-    margin-right: 8%;
+      display: grid;
+      /* grid-template-columns: 25% 50% auto ; */
+      grid-template-rows:  300px 200px 0px;
+      /* margin-left: 8%;
+      margin-right: 10%; */
   }
   .imgGrp2 {
-    width: 400px;
+    width: 100px;
   }
-  .imgFurni {
+  .triangle-bottomright {
+    width: 300px;
     height: 200px;
+    border-bottom: 200px solid rgba(12,103,208,1);
+    border-left: 300px solid transparent;
+    background: linear-gradient(90deg, rgba(12,103,208,1) 0%, rgb(190, 133, 211) 100%);
   }
 }
 @media screen and (max-width: 450px) {
@@ -308,16 +357,22 @@ hr {
   .plane {
     display: none;
   }
-  .koper {
-    display: none;
+  .about {
+    grid-row: 1/2;
+    grid-column: 1/4;
+    text-align: center!important;
   }
-  .koper1 {
-    display: none;
+  .misi {
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+  .visi {
+    grid-row: 2/3;
+    grid-column: 2/3;
   }
   .grid-container {
     grid-template-columns: auto 100% auto ;
     grid-template-rows:  auto auto auto;
-    border-bottom: 3px solid rgb(235, 175, 147);
   }
   .btnTrial {
     margin-top: 30px;
@@ -331,7 +386,9 @@ hr {
   }
   .item2 {
     grid-row:1/2;
-    grid-column: 1/4
+    grid-column: 1/4;
+    margin-left:0;
+    padding:0
   }
   .item4 {
     grid-row:2/3;
@@ -342,15 +399,27 @@ hr {
     grid-column: 1/4;
     width: 100%;
   }
+  .item5 {
+    grid-column: 2/3;
+    text-align-last: center;
+  }
   .grid-container2 {
     display: grid;
     grid-template-columns: 25% auto 25% ;
-    grid-template-rows:  200px 200px 200px;
-    border-bottom: 3px solid rgb(235, 175, 147);
+    grid-template-rows:  200px 200px;
+    margin-top: -100px;
+    margin-bottom: 50px;
+  }
+  .grid-container2 > div {
+    text-align: left;
+    padding: 5px 0;
+  }
+  .imgGrp2 {
+    width: 100px;
   }
   .flex-container2 {
     width: 100%;
-    margin-left: 0;
+    margin-left: 10%;
   }
   .navbar-brand.pl-5.ml-5 {
     margin-left: 0!important;
@@ -358,5 +427,37 @@ hr {
   }
   .navbar-nav {
     align-items: flex-start;
+    z-index: 2;
+  }
+  .T1 {
+    padding-left: 40px!important;
+    padding-right: 40px!important;
+    margin-bottom: 30px;
+  }
+  .T3 {
+    padding-left: 40px!important;
+    padding-right: 40px!important;
+    margin-top: 30px;
+
+  }
+  .flex-container2 > div {
+    width: 35%;
+  }
+  .triangle-topleft {  
+      width: 230px;
+      height: 50px;
+      border-top: 70px solid rgb(18, 209, 209);
+      border-right: 50px solid transparent;
+      position: absolute;
+      z-index: -1;
+  }
+  .AboutLink {
+    display: none;
+  }
+  .LoginBut {
+    align-items: center;
+    align-self: center;
+    /* padding-left: 0!important; */
+    padding-right: 0!important;
   }
 }
