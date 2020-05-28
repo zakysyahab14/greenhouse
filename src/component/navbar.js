@@ -50,7 +50,7 @@ const Bar = (props) => {
                   Remember me
                 </label>
               </div>
-              <button type="submit" class="btn btn-primary" style={{width: '100%'}} onSubmit={handle}>Sign in</button>
+              <button type="submit" class="btn btn-primary" style={{width: '100%'}} onSubmit={handle} href="#Nav">Sign in</button>
             </form>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/">Sign up</a>
